@@ -1,0 +1,10 @@
+.login {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-decoration: solid;
+    text-align: center;
+    font-family: inherit;
+    color: #ffff;
+}
