@@ -2,6 +2,7 @@
 import React, {useState} from "react";
 // import ReactDOM from "react-dom";
 import './Login.css';
+import ListaCursos from "../listaCursos/ListaCursos";
 
 // class Login extends React.Component {
 //     render(){
@@ -23,7 +24,7 @@ function Login(){
     const [errorMessages, setErrorMessage] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
 
-    //Info de login del usuario
+    //Info de login del/los usuario(s)
     const database = [
         {
             username: "user1",
@@ -36,8 +37,8 @@ function Login(){
     ];
 
     const errors = {
-        uname: "Invalid username",
-        pass: "Invalid password"
+        uname: "Invalid username or password",
+        pass: "Invalid username or password!"
     };
 
     const handleSubmit = (event) => {
@@ -72,6 +73,7 @@ function Login(){
     // Codigo de JSX para el formulario de login
     const renderForm = (
         <div className="form">
+            <div className="title">Sign In</div>
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
                     <label>Username </label>
@@ -93,8 +95,8 @@ function Login(){
     return (
         <div className="login">
             <div className="login-form">
-                <div className="title">Sign In</div>
-                {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+                {/* {isSubmitted ? <div>User is successfully logged in</div> : renderForm} */}
+                {isSubmitted ? <ListaCursos/> : renderForm}
             </div>
         </div>
     );
