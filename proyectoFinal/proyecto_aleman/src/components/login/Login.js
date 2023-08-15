@@ -73,6 +73,7 @@ function Login(){
     // Codigo de JSX para el formulario de login
     const renderForm = (
         <div className="form">
+        {/*                        
             <div className="title">Sign In</div>
             <form onSubmit={handleSubmit}>
                 <div className="input-container">
@@ -89,6 +90,35 @@ function Login(){
                     <input type="submit" />
                 </div>
             </form>
+        */}   
+            <div class="card text-center">
+                <div class="card-header">
+                    Guten Tag Student, treten Sie bitte hier ein
+                </div>
+                <div class="card-body">
+                    <form onSubmit={handleSubmit}>
+                        <div className="input-container">
+                            <label>Username:</label><br/>
+                            <input type="text" name="uname" required />
+                            {renderErrorMessage("uname")}
+                        </div>
+                        <div className="input-container">
+                            <label>Password:</label><br/>
+                            <input type="password" name="pass" required />
+                            {renderErrorMessage("pass")}
+                        </div>
+                        <hr/>
+                        <div className="button-container">
+                            <input type="submit" />
+                        </div>
+                    </form>
+                </div>
+  {/*               <div class="card-footer text-body-secondary">
+                    <div className="button-container">
+                        <input type="submit" />
+                    </div>
+                </div> */}
+            </div>
         </div>
     );
 

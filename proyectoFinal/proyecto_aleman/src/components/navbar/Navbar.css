@@ -9,7 +9,7 @@ a {
     color: #fff
 }
 
-li {
+li{
     list-style: none;
 }
 
@@ -30,6 +30,15 @@ li {
     font-size: 32px;
 }
 
+.logo:hover {
+    color: #f18810;
+    font-weight: bold;
+    .span-learn{
+        color: #ffff;
+        font-weight: normal;
+    }
+}
+
 .menu {
     display: flex;
     gap: 1em;
@@ -37,7 +46,8 @@ li {
 }
 
 .menu li:hover {
-    background-color: #3463ff;
+    font-weight: bold;
+    background-color: #f18810;
     border-radius: 5px;
     transition: 0.3s ease;
 }
@@ -75,4 +85,9 @@ li {
 
 .services:hover .dropdown {
     display: block;
+}
+
+span{
+    font-weight: bold;
+    color: #f18810;
 }

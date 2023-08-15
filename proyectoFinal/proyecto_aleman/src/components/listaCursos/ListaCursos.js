@@ -1,9 +1,10 @@
 import React from "react";
-import './ListaCursos.css'
+import './ListaCursos.css';
 
 const courses = [
 {
     id: 0,
+    /* image: '../../images/germany1.jpg', */
     name: 'A1 Course for Beginners',
     description: 'On this course you will learn the basics of german grammar, basic phrases and counting numbers',
     price: '$10'
@@ -31,10 +32,22 @@ const courses = [
 function ListaCursos() {
     const coursesList = courses.map(course =>
         <li key={course.id}>
-            <p><b>{course.name}: </b></p>
+            {/*             <p><b>{course.name}: </b></p>
             <b>Description:</b>
             <p>{course.description}</p>
-            <p>Price: {course.price}</p>
+            <p>Price: {course.price}</p> */}
+            <div className="card">
+                <h5 className="card-header">{course.name}</h5>
+                {course.image}
+                <div className="card-body">
+                    <h5 className="card-title">What will you be learning?</h5>
+                    <p className="card-text">{course.description}</p>
+                    {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+                </div>
+                <div className="card-footer text-body-secondary">
+                    {course.price}
+                </div>
+            </div>
         </li>
     );
     return(

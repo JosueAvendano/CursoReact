@@ -1,4 +1,4 @@
-.login {
+.loginDocente {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -7,6 +7,6 @@
     text-align: center;
     font-family: inherit;
     color: #ffff;
-    background-color: #001b43ed;
+/*     background-color: #001b43ed; */
     padding: 20rem
 }

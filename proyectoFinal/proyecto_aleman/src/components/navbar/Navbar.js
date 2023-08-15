@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import "./Navbar.css";
 import Clock from "../clock/Clock";
 
@@ -33,4 +33,63 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar;
+export default Navbar; */
+
+/* Navbar con React Routing */
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import "./Navbar.css";
+import Login from "../login/Login";
+import LoginDocente from "../loginDocente/LoginDocente";
+import ListaCursos from "../listaCursos/ListaCursos";
+import TopBanner from "../topBanner/TopBanner";
+import NotFound from "../notFound/NotFound";
+
+export default function Navbar() {
+  return (
+    <Router>
+      <div className='div-nav'>
+        <nav className='navbar'>
+          <ul>
+            <li>
+              <Link to="/"><div className='logo'><span className="span-learn">LEARN</span> DEUTSCH</div></Link>
+            </li>
+          </ul>
+          {/* <div className='timeZone'>{<Clock country="Germany's" />}</div> */}
+          <ul className='nav-links'>
+            <div className='menu'>
+              <li><Link to="/login">Login</Link></li>
+              <li><Link to="/loginProfessor">Are you a Teacher?</Link></li>
+              <li><Link to="/courses">Courses</Link></li>
+              <li><Link to="/vocabulary">Vocabulary</Link></li>
+              <li><Link to="/aboutUs">About Us</Link></li>
+              <li><Link to="/help">Help</Link></li>
+            </div>
+          </ul>
+        </nav>
+          <Switch>
+            <Route exact path="/">
+              <TopBanner/>
+            </Route>
+            <Route path="/login">
+              <Login/>
+            </Route>
+            <Route path="/loginProfessor">
+              <LoginDocente/>
+            </Route>
+            <Route path="/courses">
+              <ListaCursos/>
+            </Route>
+            <Route path="*">
+              <NotFound/>
+            </Route>
+          </Switch>
+      </div>
+    </Router>
+  );
+}
