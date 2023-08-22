@@ -1,0 +1,43 @@
+.div-vocab-general-container{
+    /* background-color: #ffff; */
+    background-color: #f18810;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3rem 0rem 3rem 0rem; 
+}
+
+.div-vocab-container{
+    border-radius: 15px;
+    /* background-color: #f18810; */
+    /* color: rgb(1, 11, 26); */
+    background-color: #010b1a;
+    /* color: #f18810; */
+    color: #ffff;
+    padding: 2rem;
+    width: 60%;
+}
+
+.div-vocab-container > h1{
+    text-align: center;
+    color: #f18810;
+}
+
+hr{
+    color: #f18810;
+}
+
+.span-dec-example{
+    /* color:rgb(1, 11, 26); */
+    color: #f18810;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.row h2{
+    color: #f18810;
+}
+
+.col-other-numbers{
+    text-align: center;
+}

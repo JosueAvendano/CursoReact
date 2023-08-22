@@ -23,7 +23,7 @@ li{
 }
 
 .nav-link a {
-    color: #fff;
+    color: #ffff;
 }
 
 .logo {
@@ -37,6 +37,11 @@ li{
         color: #ffff;
         font-weight: normal;
     }
+}
+
+span{
+    font-weight: bold;
+    color: #f18810;
 }
 
 .menu {
@@ -85,9 +90,4 @@ li{
 
 .services:hover .dropdown {
     display: block;
-}
-
-span{
-    font-weight: bold;
-    color: #f18810;
 }

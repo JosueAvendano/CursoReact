@@ -10,11 +10,11 @@ export default function NotFound() {
             {/* <h2>Fehler 404!</h2> */}
             {/* Se muestra la direccion digitada por el usuario por medio de 'direccion.pathname' */}
             {/* <p>Seite <code>{direccion.pathname}</code> nicht gefunden</p> */}
-           <div class="alert alert-danger" role="alert">
-               <h4 class="alert-heading">FEHLER 404!</h4>
+           <div className="alert alert-danger" role="alert">
+               <h4 className="alert-heading">FEHLER 404!</h4>
                <p>Seite <code>{direccion.pathname}</code> nicht gefunden</p>
                <hr />
-               <p class="mb-0">Wir konnten die von Ihnen gesuchte Website nicht finden :(</p>
+               <p className="mb-0">Wir konnten die von Ihnen gesuchte Website nicht finden :(</p>
            </div>
         </div>
         

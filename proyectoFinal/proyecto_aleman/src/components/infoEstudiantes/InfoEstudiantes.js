@@ -1,5 +1,6 @@
 import React from "react";
 import './InfoEstudiantes.css';
+/* import LoginDocente from "../loginDocente/LoginDocente"; */
 
 class InfoEstudiantes extends React.Component {
     constructor(props){
@@ -38,35 +39,36 @@ class InfoEstudiantes extends React.Component {
             return <div>Cargando datos de estudiantes...</div>
         }else{
             return(
-                <div>
-            {/*         <h2>Peticion Ajax: Users</h2>
-                    <ul>
-                        {estudiantes.map(estudiante => (
-                            <li key={estudiante.id}>
-                                {estudiante.id} | {estudiante.name} | {estudiante.username} | {estudiante.email}
-                            </li>
-                        ))}
-                    </ul> */}
-                    <table class="table table-dark table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Full Name</th>
-                                <th scope="col">Username</th>
-                                <th scope="col">Email Address</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {estudiantes.map(estudiante =>
-                                <tr key={estudiante.id}>
-                                    <th scope="row">{estudiante.id}</th>
-                                    <td>{estudiante.name}</td>
-                                    <td>{estudiante.username}</td>
-                                    <td>@{estudiante.email}</td>
-                                </tr>
-                            )}
-                        </tbody>
-                    </table>
+                <div className="div-general-info-estudiantes">
+                    <div className="div-info-estudiantes">
+                        <div className="card card-info-estudiantes">
+                            <div className="card-header card-header-info-estudiantes">
+                                <h2>Willkommen Lehrer, hier sind die Informationen zu Ihrem Schülertisch für Sie</h2>
+                            </div>
+                            <div className="card-body">
+                                <table className="table table-dark table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Full Name</th>
+                                            <th scope="col">Username</th>
+                                            <th scope="col">Email Address</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {estudiantes.map(estudiante =>
+                                            <tr key={estudiante.id}>
+                                                <th scope="row">{estudiante.id}</th>
+                                                <td>{estudiante.name}</td>
+                                                <td>{estudiante.username}</td>
+                                                <td>@{estudiante.email}</td>
+                                            </tr>
+                                        )}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             );
         }

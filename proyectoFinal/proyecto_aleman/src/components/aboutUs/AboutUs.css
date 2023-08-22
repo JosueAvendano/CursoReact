@@ -1,0 +1,35 @@
+.div-aboutUs-general-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: url('../../images/baden-wurttenberg-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem 3rem 3rem 3rem;
+}
+
+.div-aboutUs-container{
+    background-color: #f18810;
+    padding: 2rem;
+    /* width: 60%; */
+    border-radius: 15px;
+}
+
+.div-aboutUs-container > h1{
+    color: rgb(1, 11, 26); 
+}
+
+.col-img{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+.student-img{
+    border-radius: 5px;
+    border-color: black;
+    opacity: 100%;
+    width: auto;
+    height: auto;
+}

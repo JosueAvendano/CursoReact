@@ -1,0 +1,35 @@
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    color: #ffff;
+    background-color: rgb(1, 11, 26);
+}
+
+.row-footer-social .col{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.row-footer-clock .col{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-footer:hover{
+    color: #f18810;
+    font-weight: bold;
+    .span-learn{
+        color: #ffff;
+        font-weight: normal;
+    }
+}
+
+/* span{
+    font-weight: bold;
+    color: #f18810;
+} */

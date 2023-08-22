@@ -1,0 +1,18 @@
+.div-general-carousel{
+    background-color: #f18810;
+    border-radius: 0.326rem;
+    padding: 0.5rem;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.carousel-item > img {
+    height: 860px;
+}
+
+.carousel-caption{
+    background-color: rgba(1, 11, 26, 0.85);
+}
+
+/* .carousel-control-prev, .carousel-control-next:hover{
+    background-color: #f18810;
+} */

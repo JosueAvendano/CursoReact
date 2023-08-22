@@ -4,21 +4,6 @@ import React, {useState} from "react";
 import './Login.css';
 import ListaCursos from "../listaCursos/ListaCursos";
 
-// class Login extends React.Component {
-//     render(){
-//         return(
-//             <div>
-//                 <form>
-//                     <label for="user">Username:</label><br/>
-//                     <input type="text" id="user" name="user"/><br/>
-//                     <label for="psw">Password:</label><br/>
-//                     <input type="text" id="psw" name="psw"/><br/>
-//                 </form>
-//             </div>
-//         );
-//     }
-// }
-
 function Login(){
     //Estados de react
     const [errorMessages, setErrorMessage] = useState({});
@@ -72,61 +57,41 @@ function Login(){
 
     // Codigo de JSX para el formulario de login
     const renderForm = (
-        <div className="form">
-        {/*                        
-            <div className="title">Sign In</div>
-            <form onSubmit={handleSubmit}>
-                <div className="input-container">
-                    <label>Username </label>
-                    <input type="text" name="uname" required />
-                    {renderErrorMessage("uname")}
-                </div>
-                <div className="input-container">
-                    <label>Password </label>
-                    <input type="password" name="pass" required />
-                    {renderErrorMessage("pass")}
-                </div>
-                <div className="button-container">
-                    <input type="submit" />
-                </div>
-            </form>
-        */}   
-            <div class="card text-center">
-                <div class="card-header">
-                    Guten Tag Student, treten Sie bitte hier ein
-                </div>
-                <div class="card-body">
-                    <form onSubmit={handleSubmit}>
-                        <div className="input-container">
-                            <label>Username:</label><br/>
-                            <input type="text" name="uname" required />
-                            {renderErrorMessage("uname")}
-                        </div>
-                        <div className="input-container">
-                            <label>Password:</label><br/>
-                            <input type="password" name="pass" required />
-                            {renderErrorMessage("pass")}
-                        </div>
-                        <hr/>
-                        <div className="button-container">
-                            <input type="submit" />
-                        </div>
-                    </form>
-                </div>
-  {/*               <div class="card-footer text-body-secondary">
-                    <div className="button-container">
-                        <input type="submit" />
+            <div className="form">
+                <div className="card login-card text-center">
+                    <div className="card-header login-card-header">
+                        Guten Tag Student, treten Sie bitte hier ein
                     </div>
-                </div> */}
+                    <div className="card-body login-card-body">
+                        <form onSubmit={handleSubmit}>
+                            <div className="login-input-container">
+                                <label>Username:</label><br />
+                                <input type="text" name="uname" placeholder="Username" required />
+                                {renderErrorMessage("uname")}
+                            </div>
+                            <div className="login-input-container">
+                                <label>Password:</label><br />
+                                <input type="password" name="pass" placeholder="Password" required />
+                                {renderErrorMessage("pass")}
+                            </div>
+                            <hr />
+                            <div className="login-button-container">
+                                {/* <input type="submit" /> */}
+                                <button type="submit">Log In</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
     );
 
     return (
-        <div className="login">
-            <div className="login-form">
-                {/* {isSubmitted ? <div>User is successfully logged in</div> : renderForm} */}
-                {isSubmitted ? <ListaCursos/> : renderForm}
+        <div className="div-login-general-container">
+            <div className="login">
+                <div className="login-form">
+                    {/* {isSubmitted ? <div>User is successfully logged in</div> : renderForm} */}
+                    {isSubmitted ? <ListaCursos /> : renderForm}
+                </div>
             </div>
         </div>
     );

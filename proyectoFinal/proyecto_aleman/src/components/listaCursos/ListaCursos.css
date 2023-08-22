@@ -1,3 +1,51 @@
-.coursesDiv{
-    color: black;
+.div-courses-general-container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 3rem;
+    background: rgb(0,3,38);
+    background: radial-gradient(circle, rgba(0,3,38,1) 0%, rgba(2,2,74,1) 35%, rgba(0,3,38,1) 100%);
+}
+
+.card-general-courses{
+    padding: 1rem 1rem;
+    background-color: #010b1a;
+    border-color: #f18810;
+    color: #ffff;
+}
+
+.coursesDiv h1{
+    color:  #f18810;;
+}
+
+.coursesDiv ul{
+    padding: 0rem 0rem;
+}
+
+.coursesDiv ul > li{
+    margin: 0px 0px 20px 0px;
+}
+
+.card-courses{
+    border-style: solid;
+    border-color: #010b1a;
+    background-color: #f18810;
+    color: #010b1a
+}
+
+.courses-img{
+    opacity: 100%;
+}
+
+.card-courses-footer{
+    font-weight: bold;
+    color: #010b1a
+}
+
+.card-general-body-courses a{
+    font-weight: bold;
+    color: #f18810;
+}
+
+.card-general-body-courses a:hover{
+    font-weight: bold;
+    color: #ffff;
 }

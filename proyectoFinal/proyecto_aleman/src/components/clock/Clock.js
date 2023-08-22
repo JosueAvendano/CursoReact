@@ -34,7 +34,7 @@ class Clock extends React.Component{
     render(){
         return(
             <div>
-                <h1>{this.props.country} Current Time:</h1>
+                <h4>{this.props.country} Current Time:</h4>
                 {/* Me renderiza el date pero tiene un problema con el objeto -> dice que los objetos no son validos como un hijo de React */}
                 {/* <p>{this.state.gerTimeNow}</p> */}
             </div>

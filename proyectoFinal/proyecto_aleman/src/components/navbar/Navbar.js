@@ -47,8 +47,11 @@ import "./Navbar.css";
 import Login from "../login/Login";
 import LoginDocente from "../loginDocente/LoginDocente";
 import ListaCursos from "../listaCursos/ListaCursos";
-import TopBanner from "../topBanner/TopBanner";
 import NotFound from "../notFound/NotFound";
+import Vocabulario from "../vocabulario/Vocabulario";
+import AboutUs from "../aboutUs/AboutUs";
+import Home from "../home/Home";
+import Contact from "../contact/Contact";
 
 export default function Navbar() {
   return (
@@ -60,7 +63,6 @@ export default function Navbar() {
               <Link to="/"><div className='logo'><span className="span-learn">LEARN</span> DEUTSCH</div></Link>
             </li>
           </ul>
-          {/* <div className='timeZone'>{<Clock country="Germany's" />}</div> */}
           <ul className='nav-links'>
             <div className='menu'>
               <li><Link to="/login">Login</Link></li>
@@ -68,13 +70,13 @@ export default function Navbar() {
               <li><Link to="/courses">Courses</Link></li>
               <li><Link to="/vocabulary">Vocabulary</Link></li>
               <li><Link to="/aboutUs">About Us</Link></li>
-              <li><Link to="/help">Help</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </div>
           </ul>
         </nav>
           <Switch>
             <Route exact path="/">
-              <TopBanner/>
+              <Home/>
             </Route>
             <Route path="/login">
               <Login/>
@@ -84,6 +86,15 @@ export default function Navbar() {
             </Route>
             <Route path="/courses">
               <ListaCursos/>
+            </Route>
+            <Route path="/vocabulary">
+              <Vocabulario/>
+            </Route>
+            <Route path="/aboutUs">
+              <AboutUs/>
+            </Route>
+            <Route path="/contact">
+              <Contact/>
             </Route>
             <Route path="*">
               <NotFound/>

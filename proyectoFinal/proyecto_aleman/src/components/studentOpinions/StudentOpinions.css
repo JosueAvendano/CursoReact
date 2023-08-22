@@ -1,0 +1,16 @@
+.div-student-opinions-container{
+    padding: 1rem;
+}
+
+.row-opinions{
+    padding: 3rem;
+    background-color: #010b1a;
+    border-color: #f18810;
+    border-style: solid;
+    border-radius: 0.326rem;
+    border-width: 0.326rem;
+}
+
+.col-student-card li{
+    margin-bottom: 1rem;
+}

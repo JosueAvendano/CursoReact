@@ -11,11 +11,11 @@ export default function LoginDocente(){
     const database = [
         {
             username: "hermanBecker",
-            password: "professor1"
+            password: "prof1"
         },
         {
             username: "antoniaMeyer",
-            password: "professor2"
+            password: "prof2"
         }
     ];
 
@@ -58,46 +58,27 @@ export default function LoginDocente(){
 
     //Codigo de JSX para el formulario de login
     const renderForm = (
-/* 
         <div className="form">
-            <div className="title">Bist du professor oder professorin?</div>
-            <form onSubmit={handleSubmit}>
-                <div className="input-container">
-                    <label>Username </label>
-                    <input type="text" name="uname" required/>
-                    {renderErrorMessage("uname")}
-                </div>
-                <div className="input-container">
-                    <label>Password </label>
-                    <input type="password" name="pass" required/>
-                    {renderErrorMessage("pass")}
-                </div>
-                <div className="button-container">
-                    <input type="submit"/>
-                </div>
-            </form>
-        </div>
-         */
-        <div className="form">
-            <div className="card text-center">
-                <div className="card-header">
+            <div className="card login-prof-card text-center">
+                <div className="card-header login-prof-card-header">
                     Guten Tag Lehrer, treten Sie bitte hier ein
                 </div>
-            <div className="card-body">
+            <div className="card-body login-prof-card-body">
                 <form onSubmit={handleSubmit}>
-                    <div className="input-container">
+                    <div className="login-prof-input-container">
                         <label>Username:</label><br/>
-                        <input type="text" name="uname" required/>
+                        <input type="text" name="uname" placeholder="Username" required/>
                         {renderErrorMessage("uname")}
                     </div>
-                    <div className="input-container">
+                    <div className="login-prof-input-container">
                         <label>Password:</label><br/>
-                        <input type="password" name="pass" required/>
+                        <input type="password" name="pass" placeholder="Password" required/>
                         {renderErrorMessage("pass")}
                     </div>
                     <hr/>
-                    <div className="button-container">
-                        <input type="submit" />
+                    <div className="login-prof-button-container">
+                        {/* <input type="submit" /> */}
+                        <button type="submit">Log In</button>
                     </div>
                 </form>
             </div>
@@ -111,9 +92,11 @@ export default function LoginDocente(){
     );
 
     return(
-        <div className="loginDocente">
-            <div className="login-form">
-                {isSubmitted ? <InfoEstudiantes/> : renderForm}
+        <div className="div-login-prof-general-container">
+            <div className="loginDocente">
+                <div className="login-prof-form">
+                    {isSubmitted ? <InfoEstudiantes /> : renderForm}
+                </div>
             </div>
         </div>
     );

@@ -1,11 +1,15 @@
-.card-info-estudiantes{
+.card-teachers{
     background-color: #010b1a;
+    margin: 0rem 0rem 1rem 0rem;
     border-color: #f18810;
     border-style: solid;
     border-width: 0.326rem;
-    border-radius: 0.326rem;
 }
 
-.card-header-info-estudiantes{
+.card-teachers h4{
     color: #f18810;
+}
+
+.card-teachers p{
+    color: #ffff;
 }
